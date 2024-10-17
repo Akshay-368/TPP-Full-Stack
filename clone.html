@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Website</title>
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Lato", sans-serif;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+        }
+
+        .banner {
+            background-image: url('https://images.pexels.com/photos/2903985/pexels-photo-2903985.jpeg?cs=srgb&dl=pexels-2903985.jpg&fm=jpg');
+            height: 300px;
+            background-size: cover;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            padding: 100px;
+            color: #FFD700; /* Changed to a brighter color for visibility */
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .section {
+            padding: 64px;
+            background-color: #f4f4f4;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .portfolio img {
+            width: 100%;
+            max-width: 200px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .portfolio img:hover {
+            transform: scale(1.05);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 32px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .section {
+                padding: 32px;
+            }
+
+            .header {
+                padding: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- First Image Section -->
+<div class="banner">
+    <div class="header">
+        <h1>Welcome to My Website</h1>
+        <p>Photography and Design</p>
+    </div>
+</div>
+
+<!-- About Section -->
+<div class="section" id="about">
+    <h2>About Me</h2>
+    <p>I am a passionate photographer and designer with a keen eye for detail. This personal website showcases my journey in the creative world. I enjoy capturing moments and transforming ideas into visually stunning designs.</p>
+    <h3>Skills</h3>
+    <p><strong>Photography:</strong> 90%</p>
+    <p><strong>Web Design:</strong> 85%</p>
+    <p><strong>Photoshop:</strong> 75%</p>
+</div>
+
+<!-- Portfolio Section -->
+<div class="section" id="portfolio">
+    <h2>My Work</h2>
+    <div class="portfolio">
+        <img src="https://www.adorama.com/alc/wp-content/uploads/2021/04/photography-camera-learning-feature.jpg" alt="Photo 1" onclick="showImage(this)">
+        <img src="https://th.bing.com/th/id/OIP.aoGl2DjVsA0S_uY49GMn5QHaEC?rs=1&pid=ImgDetMain" alt="Photo 2" onclick="showImage(this)">
+        <img src="https://th.bing.com/th/id/OIP.zlma5OBTTIzlk1ndxGPWtQHaE8?rs=1&pid=ImgDetMain" alt="Photo 3" onclick="showImage(this)">
+        <img src="https://th.bing.com/th/id/OIP.SsVkfFpYfo2UMJ7_RwY6nAHaJQ?rs=1&pid=ImgDetMain" alt="Photo 4" onclick="showImage(this)">
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div class="section" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: mail@mail.com</p>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>&copy; 2024 My Simple Website</p>
+</div>
+
+<script>
+function showImage(element) {
+    alert("You clicked on " + element.alt);
+}
+</script>
+
+</body>
+</html>
